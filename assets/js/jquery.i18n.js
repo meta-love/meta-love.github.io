@@ -4,7 +4,7 @@
             var defaults = {
                 lang: "",
                 defaultLang: "",
-                filePath: "/i18n/",
+                filePath: "/language/",
                 filePrefix: "i18n_",
                 fileSuffix: "",
                 forever: true,
@@ -76,3 +76,37 @@
         }
     });
 })(jQuery);
+
+/*默认语言*/
+var defaultLang = "cn"
+function languageSelect(defaultLang){
+    $("[i18n]").i18n({
+        defaultLang: defaultLang,
+        filePath: "./language/",
+        filePrefix: "i18n_",
+        fileSuffix: "",
+        forever: true,
+        callback: function(res) {}
+    });
+}
+languageSelect(defaultLang);
+
+function select(){
+    $('#i18n-chinese').click(function(e){
+        e.stopPropagation();
+        var condition = $(this).text();  //根据按钮显示  中 文/English  
+        console.log('click condition', condition);
+        defaultLang = "cn",
+        languageSelect(defaultLang);
+    })
+    $('#i18n-english').click(function(e){
+        e.stopPropagation();
+        var condition = $(this).text();  //根据按钮显示  中 文/English  
+        console.log('click condition', condition);
+        defaultLang = "en",
+        languageSelect(defaultLang);
+    })
+}
+$(function(){
+    select(); 
+})
