@@ -92,19 +92,19 @@ function languageSelect(defaultLang){
 languageSelect(defaultLang);
 
 function select(){
-    $('#i18n-chinese').click(function(e){
+    $('#i18n-language').click(function(e){
         e.stopPropagation();
         var condition = $(this).text();  //根据按钮显示  中 文/English  
         console.log('click condition', condition);
-        defaultLang = "cn",
-        languageSelect(defaultLang);
-    })
-    $('#i18n-english').click(function(e){
-        e.stopPropagation();
-        var condition = $(this).text();  //根据按钮显示  中 文/English  
-        console.log('click condition', condition);
-        defaultLang = "en",
-        languageSelect(defaultLang);
+        if(condition == 'EN'){
+            $(this).text('中文');
+            defaultLang = "en",
+            languageSelect(defaultLang);
+        } else {
+            $(this).text('EN');
+            defaultLang = "cn",
+            languageSelect(defaultLang);
+        }
     })
 }
 $(function(){
