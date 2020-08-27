@@ -78,7 +78,7 @@
 })(jQuery);
 
 /*默认语言*/
-var defaultLang = "cn"
+var defaultLang = "en"
 function languageSelect(defaultLang){
     $("[i18n]").i18n({
         defaultLang: defaultLang,

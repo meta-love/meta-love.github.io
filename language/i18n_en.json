@@ -1,8 +1,18 @@
 {
   "i18n.home": "Home",
   "i18n.about": "About",
+  "i18n.artist":"Artist",
   "i18n.zhouyaoran": "Yaoran Zhou",
+  "i18n.zhouyaoran_detail": "born in 2002, was diagnosed with autism at the age of three. He is good at using line drawings and gouache. His works show his unique outlook on the world and values and are welcomed by people from different backgrounds.",
   "i18n.zhuyuchen": "Yuchen Zhu",
-  "i18n.gongyining": "Yining Zhu",
-  "i18n.niuniu": "Niuniu"
+  "i18n.zhuyuchen_detail": "born in 2000, suffers from moderate autism. He has nearly 2,000 paintings so far. His works have regular lines, bright colors, and a realistic style. They have been exhibited many times both domestically and abroad, and more than 30 works have been collected by art museums.",
+  "i18n.gongyining": "Yining Gong",
+  "i18n.gongyining_detail": "be diagnosed with autism at the age of 2. In the second year of junior high, he came into contact with paper-cutting and began to paint. After graduating from technical secondary school, his paintings are more difficult. Usually, it takes two days to paint a painting and two or three days to complete the carving. Therefore, Gong Yining often stays at home and slowly explores the carvings.",
+  "i18n.niuniu": "Niuniu",
+  "i18n.niuniu_detail": "born in March 2009, suffers from severe autism. He has studied painting with different materials such as line drawing, color, rubbing, water extension, fluid, blue sun, clay, torn paper, etc. He can cooperate with his partners in art activities, and experience the feeling of joy and relaxation from the activities.",
+  "i18n.portfolio":"Portfolio",
+  "i18n.wuhan_epidemic_war":"Wuhan epidemic war",
+  "i18n.panda":"Panda",
+  "i18n.ancient_rain_gear":"Ancient rain gear",
+  "i18n.spring":"Spring"
 }
