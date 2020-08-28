@@ -1074,7 +1074,7 @@ section {
 }
 
 .testimonials .testimonial-item p {
-  font-style: italic;
+  /* font-style: italic; */
   margin: 15px auto 15px auto;
 }
 
