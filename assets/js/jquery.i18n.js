@@ -92,8 +92,8 @@ function languageSelect(defaultLang){
 languageSelect(defaultLang);
 
 function select(){
-    if ($('.mobile-nav').length){
-        console.log('移动端');
+    if (isMobile()){
+        alert('移动端');
         // 移动端
         $('#i18n-language').on('tap', function(e){
             changeLanguage(e);
@@ -106,7 +106,7 @@ function select(){
     }
 }
 function changeLanguage(e){
-    console.log('333333');
+    console.log('555555');
     e.stopPropagation();
     var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
     console.log('click condition', condition);
@@ -123,3 +123,27 @@ function changeLanguage(e){
 $(function(){
     select(); 
 })
+
+function isMobile(){
+
+    var system = {
+        win: false,
+        mac: false,
+        xll: false,
+        ipad:false
+    };
+
+    //检测平台
+    var p = navigator.platform;
+
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;
+
+    if (system.win || system.mac || system.xll ||system.ipad) {
+        return false;
+    } else {
+        return true;
+    }
+}
