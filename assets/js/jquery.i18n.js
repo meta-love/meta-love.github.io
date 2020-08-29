@@ -92,21 +92,61 @@ function languageSelect(defaultLang){
 languageSelect(defaultLang);
 
 function select(){
-    $('#i18n-language').click(function(e){
-        e.stopPropagation();
-        var condition = $(this).text();  //根据按钮显示  中 文/English  
-        console.log('click condition', condition);
-        if(condition == 'EN'){
-            $(this).text('中文');
-            defaultLang = "en",
-            languageSelect(defaultLang);
-        } else {
-            $(this).text('EN');
-            defaultLang = "cn",
-            languageSelect(defaultLang);
-        }
-    })
+    if (isMobile()){
+        alert('移动端666');
+        // 移动端
+        document.getElementById('i18n-language').addEventListener('tap', function(e) {
+            // $('#i18n-language').on('touchstart', function(e){
+                alert('touchstart');
+                changeLanguage(e);
+            // })
+        })
+    } else {
+        // pc端
+        $('#i18n-language').on('click', function(e){
+            changeLanguage(e);
+        }) 
+    }
+}
+function changeLanguage(e){
+    alert('changeLanguage');
+    e.stopPropagation();
+    var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
+    console.log('click condition', condition);
+    if(condition == 'EN'){
+        $('#i18n-language').text('中文');
+        defaultLang = "en",
+        languageSelect(defaultLang);
+    } else {
+        $('#i18n-language').text('EN');
+        defaultLang = "cn",
+        languageSelect(defaultLang);
+    }
 }
 $(function(){
     select(); 
 })
+
+function isMobile(){
+
+    var system = {
+        win: false,
+        mac: false,
+        xll: false,
+        ipad:false
+    };
+
+    //检测平台
+    var p = navigator.platform;
+
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;
+
+    if (system.win || system.mac || system.xll ||system.ipad) {
+        return false;
+    } else {
+        return true;
+    }
+}
