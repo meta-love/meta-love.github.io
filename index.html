@@ -26,24 +26,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- i18n -->
-  <script src="assets/js/jquery.i18n.js"></script>
-
   <!-- =======================================================
   * Template Name: Multi - v2.1.0
   * Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/
@@ -361,6 +343,97 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- i18n -->
+  <script src="assets/js/jquery.i18n.js"></script>
+  <script>
+    /*默认语言*/
+    var defaultLang = "en"
+    function languageSelect(defaultLang){
+        $("[i18n]").i18n({
+            defaultLang: defaultLang,
+            filePath: "./language/",
+            filePrefix: "i18n_",
+            fileSuffix: "",
+            forever: true,
+            callback: function(res) {}
+        });
+    }
+    languageSelect(defaultLang);
+
+    function select(){
+        if (isMobile()){
+            // 移动端
+            document.getElementById('i18n-language').addEventListener('tap', function(e) {
+                // $('#i18n-language').on('touchstart', function(e){
+                    alert('touchstart');
+                    changeLanguage(e);
+                // })
+            })
+        } else {
+            // pc端
+            $('#i18n-language').on('click', function(e){
+                changeLanguage(e);
+            }) 
+        }
+    }
+    function changeLanguage(e){
+        alert('changeLanguage');
+        e.stopPropagation();
+        var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
+        console.log('click condition', condition);
+        if(condition == 'EN'){
+            $('#i18n-language').text('中文');
+            defaultLang = "en",
+            languageSelect(defaultLang);
+        } else {
+            $('#i18n-language').text('EN');
+            defaultLang = "cn",
+            languageSelect(defaultLang);
+        }
+    }
+    $(function(){
+        select(); 
+    })
+
+    function isMobile(){
+
+        var system = {
+            win: false,
+            mac: false,
+            xll: false,
+            ipad:false
+        };
+
+        //检测平台
+        var p = navigator.platform;
+
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;
+
+        if (system.win || system.mac || system.xll ||system.ipad) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+  </script>
 
 </body>
 
