@@ -92,7 +92,8 @@ function languageSelect(defaultLang){
 languageSelect(defaultLang);
 
 function select(){
-    if ($('body').hasClass('mobile-nav-active')){
+    if ($('.mobile-nav').length){
+        console.log('移动端');
         // 移动端
         $('#i18n-language').on('tap', function(e){
             changeLanguage(e);
@@ -105,7 +106,7 @@ function select(){
     }
 }
 function changeLanguage(e){
-    console.log('222222');
+    console.log('333333');
     e.stopPropagation();
     var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
     console.log('click condition', condition);
