@@ -93,9 +93,9 @@ languageSelect(defaultLang);
 
 function select(){
     if (isMobile()){
-        alert('移动端555');
+        alert('移动端666');
         // 移动端
-        document.getElementById('i18n-language').addEventListener('click', function(e) {
+        document.getElementById('i18n-language').addEventListener('tap', function(e) {
             // $('#i18n-language').on('touchstart', function(e){
                 alert('touchstart');
                 changeLanguage(e);
