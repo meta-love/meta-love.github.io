@@ -93,7 +93,6 @@ languageSelect(defaultLang);
 
 function select(){
     if (isMobile()){
-        alert('移动端666');
         // 移动端
         document.getElementById('i18n-language').addEventListener('tap', function(e) {
             // $('#i18n-language').on('touchstart', function(e){
@@ -109,7 +108,6 @@ function select(){
     }
 }
 function changeLanguage(e){
-    alert('changeLanguage');
     e.stopPropagation();
     var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
     console.log('click condition', condition);
