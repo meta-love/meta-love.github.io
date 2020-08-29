@@ -1,6 +1,9 @@
 {
   "i18n.home": "主页",
   "i18n.about": "关于",
+  "i18n.hero_title":"“秘密花园”自闭症儿童艺术展",
+  "i18n.hero_content":"新冠疫情仍在继续。一群来自武汉的自闭症儿童艺术家们，用他们纯洁真实的独特视角记录下了疫情期间点点滴滴，希望通过艺术和爱来治愈这个世界。因此，MetaLove举办了这场公益售卖会，向公众展示并出售他们的加密艺术品，希望大家能借此机会走进自闭症患儿的内心世界，理解、关爱这些“星星的孩子”们。",
+  "i18n.hero_time": "2020年8月30日 – 9月6日",
   "i18n.artist":"艺术家",
   "i18n.zhouyaoran": "邹耀然",
   "i18n.zhouyaoran_detail": "2002年出生，三岁确诊自闭症。善用线描和水粉，作品展现出独有的价值观和世界观，雅俗共赏",
@@ -14,5 +17,15 @@
   "i18n.wuhan_epidemic_war":"武汉战疫",
   "i18n.panda":"熊猫",
   "i18n.ancient_rain_gear":"蓑衣斗笠",
-  "i18n.spring":"春"
+  "i18n.liwenliang":"抗疫英雄李文亮医生",
+  "i18n.hero_city_wuhan":"英雄之城武汉",
+  "i18n.wuhan_is_finally_unblocked":"武汉终于解封啦",
+  "i18n.wuhan_river_beach_park_after_unblocking":"解封后的武汉江滩公园",
+  "i18n.the_train_to_spring":"开往春天的列车",
+  "i18n.the_mighty_lion":"威武之狮",
+  "i18n.han_xiangzi ":"韩湘子（横笛）",
+  "i18n.longevity":"寿",
+  "i18n.lotus":"荷花",
+  "i18n.possessing_blessing_and_longevity":"福寿双全",
+  "i18n.immortals_are_strolling":"神仙散步"
 }
