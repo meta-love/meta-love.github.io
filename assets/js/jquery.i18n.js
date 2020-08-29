@@ -92,20 +92,31 @@ function languageSelect(defaultLang){
 languageSelect(defaultLang);
 
 function select(){
-    $('#i18n-language').click(function(e){
-        e.stopPropagation();
-        var condition = $(this).text();  //根据按钮显示  中 文/English  
-        console.log('click condition', condition);
-        if(condition == 'EN'){
-            $(this).text('中文');
-            defaultLang = "en",
-            languageSelect(defaultLang);
-        } else {
-            $(this).text('EN');
-            defaultLang = "cn",
-            languageSelect(defaultLang);
-        }
-    })
+    if ($('body').hasClass('mobile-nav-active')){
+        // 移动端
+        $('#i18n-language').on('touchstart', function(e){
+            changeLanguage(e);
+        })
+    } else {
+        // pc端
+        $('#i18n-language').on('click', function(e){
+            changeLanguage(e);
+        }) 
+    }
+}
+function changeLanguage(e){
+    e.stopPropagation();
+    var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
+    console.log('click condition', condition);
+    if(condition == 'EN'){
+        $('#i18n-language').text('中文');
+        defaultLang = "en",
+        languageSelect(defaultLang);
+    } else {
+        $('#i18n-language').text('EN');
+        defaultLang = "cn",
+        languageSelect(defaultLang);
+    }
 }
 $(function(){
     select(); 
