@@ -93,11 +93,13 @@ languageSelect(defaultLang);
 
 function select(){
     if (isMobile()){
-        alert('移动端');
+        alert('移动端1111');
         // 移动端
-        $('#i18n-language').on('touchstart', function(e){
-            alert('touchstart');
-            changeLanguage(e);
+        $('#i18n-language').click(function(e) {
+            // $('#i18n-language').on('touchstart', function(e){
+                alert('touchstart');
+                changeLanguage(e);
+            // })
         })
     } else {
         // pc端
