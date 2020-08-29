@@ -107,7 +107,7 @@ function select(){
     }
 }
 function changeLanguage(e){
-    console.log('555555');
+    console.log('666666');
     e.stopPropagation();
     var condition = $('#i18n-language').text();  //根据按钮显示  中 文/English  
     console.log('click condition', condition);
