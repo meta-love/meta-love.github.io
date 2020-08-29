@@ -95,7 +95,8 @@ function select(){
     if (isMobile()){
         alert('移动端');
         // 移动端
-        $('#i18n-language').on('tap', function(e){
+        $('#i18n-language').on('touchstart', function(e){
+            alert('touchstart');
             changeLanguage(e);
         })
     } else {
