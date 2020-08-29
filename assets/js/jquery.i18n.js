@@ -93,7 +93,7 @@ languageSelect(defaultLang);
 
 function select(){
     if (isMobile()){
-        alert('移动端222');
+        alert('移动端333');
         // 移动端
         document.getElementById('i18n-language').click(function(e) {
             // $('#i18n-language').on('touchstart', function(e){
