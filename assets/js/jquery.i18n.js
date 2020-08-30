@@ -94,11 +94,9 @@ languageSelect(defaultLang);
 function select(){
     if (isMobile()){
         // 移动端
-        document.getElementById('i18n-language').addEventListener('tap', function(e) {
-            // $('#i18n-language').on('touchstart', function(e){
-                alert('touchstart');
-                changeLanguage(e);
-            // })
+        document.body.addEventListener('click',function(e){
+            if(e.target.id === 'i18n-language')
+            changeLanguage(e);
         })
     } else {
         // pc端
@@ -126,25 +124,14 @@ $(function(){
 })
 
 function isMobile(){
-
-    var system = {
-        win: false,
-        mac: false,
-        xll: false,
-        ipad:false
-    };
-
-    //检测平台
-    var p = navigator.platform;
-
-    system.win = p.indexOf("Win") == 0;
-    system.mac = p.indexOf("Mac") == 0;
-    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
-    system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;
-
-    if (system.win || system.mac || system.xll ||system.ipad) {
-        return false;
-    } else {
-        return true;
+    var u = navigator.userAgent;
+    if(u.match(/iPhone/i) || u.match(/Android/i) || u.match(/iPod/i)){
+      return true
     }
+    //判断IPad设备
+    if(navigator.userAgent.match(/iPad/i)) {
+      return true
+    }
+
+    return false
 }
